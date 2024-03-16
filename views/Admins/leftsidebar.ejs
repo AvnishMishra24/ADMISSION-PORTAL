@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>MISHRA INSTITUTE OF TECHNOLOGY</title>
+<link rel="icon" type="image" href="/assets/images/logo1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+
+  <ul class="nav nav-pills flex-column mb-auto">
+  <li><a href="/admin/dashboard" class="w3-bar-item w3-button"><i class="fa fa-tachometer"></i>  Dashboard</a></li>
+  <li><a href="#" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i>  Registration Detail </a></li>
+  <li><a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i>  User Detail</a></li>
+  <li><a class="w3-bar-item w3-button" href="/admin/profile"><i class="fa fa-male"></i>  Profile</a></li>
+  <li><a class="w3-bar-item w3-button" href="/logout"><i class="fa fa-sign-out"></i>  logout</a></li>
+  </ul>
+</div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+</body>
+</html>

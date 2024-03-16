@@ -1,0 +1,331 @@
+<%- include('../header.ejs') %>
+
+    <div class="container-fluid text-center">
+        <div class="contact">
+            <h1> Hi there, <%= n %> !<br> Welcome To MISHRA INSTITUTE OF TECHNOLOGY
+            </h1>
+        </div>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-sm-4 py-3 py-sm-0">
+                <div class="card box-shadow">
+                    <img src="/assets/images/btech.png" class="card-img-top" alt="..." height="215px">
+                    <div class="card-body">
+                        <h5 class="card-title">B.TECH</h5>
+                        <p class="card-text" style="text-align:justify">Bachelor of Technology (BTech) is a professional
+                            undergraduate
+                            engineering degree programme awarded to candidates after they complete four years of
+                            study in the field.</p>
+                        <% if(b) { %>
+                            <a href="/appliedcourses" class="btn btn-danger btn-sm btn-block">Display</a>
+                            <% } else { %>
+                                <button type="button" class="btn btn-danger btn-sm btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#login">
+                                    Register
+                                </button>
+                                <% } %>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registration </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/register_course" method="post">
+                                    <input type="hidden" name="user" value="<%= id %>">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" name="name" value="<%= n %>" class="form-control"
+                                            placeholder="Name">
+                                    </div>
+                                    <br>
+                                    <label>Email</label>
+                                    <div class="form-group">
+                                        <input type="text" name="email" class="form-control" placeholder="Email"
+                                            value="<%= e %>">
+                                    </div>
+                                    <br>
+                                    <label>Mobile</label>
+                                    <div class="form-group">
+                                        <input type="text" name="mobile" class="form-control"
+                                            placeholder="Enter Phone Name">
+                                    </div>
+                                    <br>
+                                    <label>Address</label>
+                                    <div class="form-group">
+                                        <textarea name="address" placeholder="Enter Your Address"
+                                            class="form-control"></textarea>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>Gender:</label><br>
+                                        <input type="radio" name="gender" value="male"> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>College</label>
+                                        <br>
+                                        <select name="college" class="form-control">
+                                            <option value="0">Select college</option>
+                                            <option value="MIOT">MISHRA INSTITUTE OF TECHNOLOGY</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Branch</label>
+                                        <br>
+                                        <select name="branch" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="C.S.E">C.S.E</option>
+                                            <option value="I.T">I.T</option>
+                                            <option value="E.E">E.E</option>
+                                            <option value="E.C">E.C</option>
+                                            <option value="MECH">MECH.</option>
+                                            <option value="CIVIL">CIVIL</option>
+                                            <option value="AUTOMOBILE">AUTOMOBILE</option>
+                                            <option value="OTHERS">OTHERS</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Course</label>
+                                        <select name="course" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="MBA">BTech</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                            aria-label="close">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 py-3 py-sm-0">
+                <div class="card box-shadow">
+                    <img src="./assets/images/m.tech.png" class="card-img-top"
+                        alt="..." height="215px">
+                    <div class="card-body">
+                        <h5 class="card-title">M.TECH</h5>
+                        <p class="card-text" style="text-align:justify">Full form of ME is Master of Engineering and
+                            that of MTech is
+                            Master of Technology. MTech is a professional postgraduate engineering master degree
+                            programme. It's a 2 year course.</p>
+
+                        <% if(m) { %>
+                            <a href="/appliedcourses" class="btn btn-danger btn-sm btn-block">Display</a>
+                            <% } else { %>
+                                <button type="button" class="btn btn-danger btn-sm btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#mtech">
+                                    Register
+                                </button>
+                                <% } %>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="mtech" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registration </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/register_course" method="post">
+                                    <input type="hidden" name="user" value="<%= id %>">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" name="name" value="<%= n %>" class="form-control"
+                                            placeholder="Name">
+                                    </div>
+                                    <br>
+                                    <label>Email</label>
+                                    <div class="form-group">
+                                        <input type="text" name="email" class="form-control" placeholder="Email"
+                                            value="<%= e %>">
+                                    </div>
+                                    <br>
+                                    <label>Mobile</label>
+                                    <div class="form-group">
+                                        <input type="text" name="mobile" class="form-control"
+                                            placeholder="Enter Phone Name">
+                                    </div>
+                                    <br>
+                                    <label>Address</label>
+                                    <div class="form-group">
+                                        <textarea name="address" placeholder="Enter Your Address"
+                                            class="form-control"></textarea>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>Gender:</label><br>
+                                        <input type="radio" name="gender" value="male"> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>College</label>
+                                        <br>
+                                
+                                            <select name="college" class="form-control">
+                                                <option value="0">Select college</option>
+                                                <option value="MIOT">MISHRA INSTITUTE OF TECHNOLOGY</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Branch</label>
+                                        <br>
+                                        <select name="branch" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="C.S.E">C.S.E</option>
+                                            <option value="I.T">I.T</option>
+                                            <option value="E.E">E.E</option>
+                                            <option value="E.C">E.C</option>
+                                            <option value="MECH">MECH.</option>
+                                            <option value="CIVIL">CIVIL</option>
+                                            <option value="AUTOMOBILE">AUTOMOBILE</option>
+                                            <option value="OTHERS">OTHERS</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Course</label>
+                                        <select name="course" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="MBA">MTech</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                            aria-label="close">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 py-3 py-sm-0">
+                <div class="card box-shadow">
+                    <img src="/assets/images/mba.jpg" class="card-img-top" alt="..." height="215px">
+                    <div class="card-body">
+                        <h5 class="card-title">MBA </h5>
+                        <p class="card-text" style="text-align:justify">What Classes Are Included in an MBA. An MBA
+                            typically includes
+                            courses in accounting, organizational behavior, economics, management and business.
+                            ethics. It's a 2 year course.</p>
+                        <button type="button" class="btn btn-danger btn-sm btn-block" data-bs-toggle="modal"
+                            data-bs-target="#mba">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="mba" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registration </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/register_course" method="post">
+                                    <input type="hidden" name="user" value="<%= id %>">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" name="name" value="<%= n %>" class="form-control"
+                                            placeholder="Name">
+                                    </div>
+                                    <br>
+                                    <label>Email</label>
+                                    <div class="form-group">
+                                        <input type="text" name="email" class="form-control" placeholder="Email"
+                                            value="<%= e %>">
+                                    </div>
+                                    <br>
+                                    <label>Mobile</label>
+                                    <div class="form-group">
+                                        <input type="text" name="mobile" class="form-control"
+                                            placeholder="Enter Phone Name">
+                                    </div>
+                                    <br>
+                                    <label>Address</label>
+                                    <div class="form-group">
+                                        <textarea name="address" placeholder="Enter Your Address"
+                                            class="form-control"></textarea>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>Gender:</label><br>
+                                        <input type="radio" name="gender" value="male"> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label>College</label>
+                                        <br>
+                                        <select name="college" class="form-control">
+                                            <option value="0">Select college</option>
+                                            <option value="MIOT">MISHRA INSTITUTE OF TECHNOLOGY</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Branch</label>
+                                        <br>
+                                        <select name="branch" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="C.S.E">C.S.E</option>
+                                            <option value="I.T">I.T</option>
+                                            <option value="E.E">E.E</option>
+                                            <option value="E.C">E.C</option>
+                                            <option value="MECH">MECH.</option>
+                                            <option value="CIVIL">CIVIL</option>
+                                            <option value="AUTOMOBILE">AUTOMOBILE</option>
+                                            <option value="OTHERS">OTHERS</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Course</label>
+                                        <select name="course" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="MBA">MBA</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                            aria-label="close">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <%- include('../footer.ejs') %>
